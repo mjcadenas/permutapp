@@ -1,0 +1,6 @@
+framework module Pods_permutapp {
+  umbrella header "Pods-permutapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

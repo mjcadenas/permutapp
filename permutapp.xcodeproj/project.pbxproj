@@ -16,12 +16,15 @@
 		3E0AFAE5245F8C4600CF644F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AFAE4245F8C4600CF644F /* SignUpViewController.swift */; };
 		3E0AFAE7245F8C6A00CF644F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AFAE6245F8C6A00CF644F /* LoginViewController.swift */; };
 		3E0AFAE9245F8C8000CF644F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AFAE8245F8C8000CF644F /* HomeViewController.swift */; };
+		3E94EF1324600C7B0016CF16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E94EF1224600C7B0016CF16 /* GoogleService-Info.plist */; };
 		3EBDB340245F9C5D00B63510 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBDB33E245F9C5D00B63510 /* Constants.swift */; };
 		3EBDB341245F9C5D00B63510 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBDB33F245F9C5D00B63510 /* Utilities.swift */; };
 		3EBDB344245F9DDD00B63510 /* logo-dlga-ETSII.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBDB343245F9DDD00B63510 /* logo-dlga-ETSII.png */; };
+		68736E0A08503CC00A2F56FC /* Pods_permutapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C95A8580892D43DE360327E /* Pods_permutapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C95A8580892D43DE360327E /* Pods_permutapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_permutapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0A57CC245F866C000241B4 /* permutapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = permutapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0A57CF245F866C000241B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E0A57D1245F866C000241B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +36,12 @@
 		3E0AFAE4245F8C4600CF644F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3E0AFAE6245F8C6A00CF644F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E0AFAE8245F8C8000CF644F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3E94EF1224600C7B0016CF16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EBDB33E245F9C5D00B63510 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3EBDB33F245F9C5D00B63510 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3EBDB343245F9DDD00B63510 /* logo-dlga-ETSII.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dlga-ETSII.png"; sourceTree = "<group>"; };
+		5F1DE55AC28F3BA512CD7A38 /* Pods-permutapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-permutapp.debug.xcconfig"; path = "Target Support Files/Pods-permutapp/Pods-permutapp.debug.xcconfig"; sourceTree = "<group>"; };
+		88BC0CA0D259CC9E3E323471 /* Pods-permutapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-permutapp.release.xcconfig"; path = "Target Support Files/Pods-permutapp/Pods-permutapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68736E0A08503CC00A2F56FC /* Pods_permutapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C11E7B02696C65AF0645519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C95A8580892D43DE360327E /* Pods_permutapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BE6E8506D9B7513FF35900E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F1DE55AC28F3BA512CD7A38 /* Pods-permutapp.debug.xcconfig */,
+				88BC0CA0D259CC9E3E323471 /* Pods-permutapp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3E0A57C3245F866C000241B4 = {
 			isa = PBXGroup;
 			children = (
 				3E0A57CE245F866C000241B4 /* permutapp */,
 				3E0A57CD245F866C000241B4 /* Products */,
+				3BE6E8506D9B7513FF35900E /* Pods */,
+				0C11E7B02696C65AF0645519 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +95,7 @@
 		3E0A57CE245F866C000241B4 /* permutapp */ = {
 			isa = PBXGroup;
 			children = (
+				3E94EF1224600C7B0016CF16 /* GoogleService-Info.plist */,
 				3EBDB342245F9DC500B63510 /* Media */,
 				3EBDB33D245F9C2800B63510 /* Helpers */,
 				3E0A57CF245F866C000241B4 /* AppDelegate.swift */,
@@ -116,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E0A57E0245F866E000241B4 /* Build configuration list for PBXNativeTarget "permutapp" */;
 			buildPhases = (
+				D11164E70E2FDA49FA55D09E /* [CP] Check Pods Manifest.lock */,
 				3E0A57C8245F866C000241B4 /* Sources */,
 				3E0A57C9245F866C000241B4 /* Frameworks */,
 				3E0A57CA245F866C000241B4 /* Resources */,
+				31D3760567E5CF104DBAB98F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,12 +199,55 @@
 			files = (
 				3E0A57DC245F866E000241B4 /* LaunchScreen.storyboard in Resources */,
 				3E0A57D9245F866E000241B4 /* Assets.xcassets in Resources */,
+				3E94EF1324600C7B0016CF16 /* GoogleService-Info.plist in Resources */,
 				3E0A57D7245F866C000241B4 /* Main.storyboard in Resources */,
 				3EBDB344245F9DDD00B63510 /* logo-dlga-ETSII.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31D3760567E5CF104DBAB98F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-permutapp/Pods-permutapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-permutapp/Pods-permutapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-permutapp/Pods-permutapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D11164E70E2FDA49FA55D09E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-permutapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E0A57C8245F866C000241B4 /* Sources */ = {
@@ -330,6 +403,7 @@
 		};
 		3E0A57E1245F866E000241B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1DE55AC28F3BA512CD7A38 /* Pods-permutapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +422,7 @@
 		};
 		3E0A57E2245F866E000241B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BC0CA0D259CC9E3E323471 /* Pods-permutapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
