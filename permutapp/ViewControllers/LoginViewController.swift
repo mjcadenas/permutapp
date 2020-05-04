@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -24,8 +23,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
+         // Do any additional setup after loading the view.
+               setUpElements()
+        }
+        func setUpElements(){
+               
+            errorLabel.alpha = 0
+
+            Utilities.styleTextField(emailTextField)
+            Utilities.styleTextField(passwordTextField)
+            Utilities.styleFilledButton(loginButton)
+           }
 
     /*
     // MARK: - Navigation

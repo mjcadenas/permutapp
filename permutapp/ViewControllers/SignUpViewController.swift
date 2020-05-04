@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingUpViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     
@@ -29,8 +29,19 @@ class SingUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
     }
-    
+    func setUpElements(){
+        
+        errorLabel.alpha = 0
+        
+        Utilities.styleTextField(firstNameTextField)
+        Utilities.styleTextField(lastNameTextField)
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleTextField(gradeTextField)
+        Utilities.styleFilledButton(signUpButton)
+    }
 
     /*
     // MARK: - Navigation
@@ -42,7 +53,7 @@ class SingUpViewController: UIViewController {
     }
     */
 
-    @IBAction func singUpTapped(_ sender: Any) {
+    @IBAction func signUpTapped(_ sender: Any) {
     }
     
     

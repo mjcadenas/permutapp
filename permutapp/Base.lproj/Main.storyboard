@@ -25,7 +25,7 @@
                                         </constraints>
                                         <state key="normal" title="Regístrate"/>
                                         <connections>
-                                            <segue destination="8ha-Pj-Zv6" kind="show" id="IzJ-FY-kMp"/>
+                                            <segue destination="8ha-Pj-Zv6" kind="show" id="Xr7-q3-9lI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roe-DS-Fgf">
@@ -53,6 +53,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="LVl-d8-8jf"/>
+                    <connections>
+                        <outlet property="loginButton" destination="roe-DS-Fgf" id="eyn-gA-ev5"/>
+                        <outlet property="signUpButton" destination="pF8-z2-sxs" id="lmn-ys-teD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--Sing Up View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="mKt-B1-7P5">
             <objects>
-                <viewController id="8ha-Pj-Zv6" customClass="SingUpViewController" customModule="permutapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8ha-Pj-Zv6" customClass="SignUpViewController" customModule="permutapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ebl-B3-Gt6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,9 +144,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="oH8-Vo-3Jh" secondAttribute="bottom" constant="40" id="Poa-uZ-FTI"/>
-                            <constraint firstItem="1YG-L5-LBq" firstAttribute="trailing" secondItem="oH8-Vo-3Jh" secondAttribute="trailing" constant="40" id="UTD-ak-OEq"/>
-                            <constraint firstItem="oH8-Vo-3Jh" firstAttribute="leading" secondItem="1YG-L5-LBq" secondAttribute="leading" constant="40" id="ywS-T2-4wk"/>
+                            <constraint firstItem="1YG-L5-LBq" firstAttribute="trailing" secondItem="oH8-Vo-3Jh" secondAttribute="trailing" constant="40" id="AxH-yI-LMh"/>
+                            <constraint firstItem="oH8-Vo-3Jh" firstAttribute="leading" secondItem="1YG-L5-LBq" secondAttribute="leading" constant="40" id="Fol-WY-w2s"/>
+                            <constraint firstItem="1YG-L5-LBq" firstAttribute="bottom" secondItem="oH8-Vo-3Jh" secondAttribute="bottom" constant="40" id="usX-Q6-DPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1YG-L5-LBq"/>
                     </view>
@@ -207,9 +211,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="trailing" secondItem="6hD-Yu-uNV" secondAttribute="trailing" constant="40" id="5WC-uf-270"/>
-                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="bottom" secondItem="6hD-Yu-uNV" secondAttribute="bottom" constant="40" id="B7b-rZ-VjA"/>
-                            <constraint firstItem="6hD-Yu-uNV" firstAttribute="leading" secondItem="rpi-uJ-y5d" secondAttribute="leading" constant="40" id="LPa-g4-EuD"/>
+                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="bottom" secondItem="6hD-Yu-uNV" secondAttribute="bottom" constant="40" id="Clc-dP-RNj"/>
+                            <constraint firstItem="6hD-Yu-uNV" firstAttribute="leading" secondItem="rpi-uJ-y5d" secondAttribute="leading" constant="40" id="MBH-61-Xye"/>
+                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="trailing" secondItem="6hD-Yu-uNV" secondAttribute="trailing" constant="40" id="WC5-jx-avC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rpi-uJ-y5d"/>
                     </view>
