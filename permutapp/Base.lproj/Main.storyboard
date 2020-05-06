@@ -89,56 +89,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oH8-Vo-3Jh">
-                                <rect key="frame" x="40" y="441.5" width="334" height="380.5"/>
+                                <rect key="frame" x="40" y="362" width="334" height="460"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwv-eG-0mB">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UVUS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zPo-kR-LJq">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bQo-G0-A6e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwv-eG-0mB">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hQl-2x-tNI"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTS-Lf-V5B">
-                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="120" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ygh-vO-xK1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rv6-k1-lqF">
-                                        <rect key="frame" x="0.0" y="120" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="180" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XRP-BR-tgM"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJa-D0-fDo">
-                                        <rect key="frame" x="0.0" y="180" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="240" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lbm-od-V1C"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pbd-Ue-lC3">
-                                        <rect key="frame" x="0.0" y="240" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="300" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6Dd-zO-oOb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-4q-FJd">
-                                        <rect key="frame" x="0.0" y="300" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="360" width="334" height="40"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="N3a-c7-aUJ"/>
                                             <constraint firstAttribute="height" constant="40" id="dVq-Lf-jlf"/>
                                         </constraints>
                                         <state key="normal" title="Regístrate"/>
                                         <connections>
-                                            <action selector="singUpTapped:" destination="8ha-Pj-Zv6" eventType="touchUpInside" id="VCE-j4-FdX"/>
+                                            <action selector="signUpTapped:" destination="8ha-Pj-Zv6" eventType="touchUpInside" id="prm-4E-4v8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpV-8T-2qX">
-                                        <rect key="frame" x="0.0" y="360" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="420" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MZH-Xt-QKf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.12549019610000001" green="0.1647058824" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sJa-D0-fDo" firstAttribute="height" secondItem="dwv-eG-0mB" secondAttribute="height" id="67b-NQ-s7w"/>
-                                    <constraint firstItem="Pbd-Ue-lC3" firstAttribute="height" secondItem="dwv-eG-0mB" secondAttribute="height" id="6DP-C0-B3C"/>
-                                    <constraint firstItem="rTS-Lf-V5B" firstAttribute="height" secondItem="dwv-eG-0mB" secondAttribute="height" id="JqL-Ck-HyX"/>
-                                    <constraint firstItem="kJg-4q-FJd" firstAttribute="height" secondItem="dwv-eG-0mB" secondAttribute="height" id="Jqg-df-Sd7"/>
-                                    <constraint firstItem="rv6-k1-lqF" firstAttribute="height" secondItem="dwv-eG-0mB" secondAttribute="height" id="u07-jk-unW"/>
+                                    <constraint firstItem="kJg-4q-FJd" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="3Bf-vX-umj"/>
+                                    <constraint firstItem="rTS-Lf-V5B" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="AlO-UR-gic"/>
+                                    <constraint firstItem="sJa-D0-fDo" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="CpT-rc-4N6"/>
+                                    <constraint firstItem="dwv-eG-0mB" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="RYr-e3-1LQ"/>
+                                    <constraint firstItem="Pbd-Ue-lC3" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="nUH-uk-4js"/>
+                                    <constraint firstItem="rv6-k1-lqF" firstAttribute="height" secondItem="zPo-kR-LJq" secondAttribute="height" id="uza-ex-qNO"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -154,11 +182,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="rv6-k1-lqF" id="kcs-4N-vbi"/>
                         <outlet property="errorLabel" destination="YpV-8T-2qX" id="e1X-sI-ft5"/>
-                        <outlet property="firstNameTextField" destination="dwv-eG-0mB" id="tSr-bh-DRZ"/>
+                        <outlet property="firstNameTextField" destination="dwv-eG-0mB" id="L1z-Bs-nuz"/>
                         <outlet property="gradeTextField" destination="Pbd-Ue-lC3" id="uTY-xj-a3a"/>
                         <outlet property="lastNameTextField" destination="rTS-Lf-V5B" id="D0c-ou-ue1"/>
                         <outlet property="passwordTextField" destination="sJa-D0-fDo" id="EqT-ye-xqR"/>
                         <outlet property="signUpButton" destination="kJg-4q-FJd" id="PTb-eg-bsV"/>
+                        <outlet property="uvusTextField" destination="zPo-kR-LJq" id="raR-7r-JMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdU-An-IJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,7 +213,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-kd-o9l">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRS-fp-vg0">
                                         <rect key="frame" x="0.0" y="120" width="334" height="40"/>
@@ -232,7 +261,7 @@
         <!--Home View Controller-->
         <scene sceneID="GUo-ok-HlO">
             <objects>
-                <viewController id="0Kk-zQ-R6N" customClass="HomeViewController" customModule="permutapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="0Kk-zQ-R6N" customClass="HomeViewController" customModule="permutapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="orE-4O-Tp9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
