@@ -183,7 +183,7 @@
                         <outlet property="emailTextField" destination="rv6-k1-lqF" id="kcs-4N-vbi"/>
                         <outlet property="errorLabel" destination="YpV-8T-2qX" id="e1X-sI-ft5"/>
                         <outlet property="firstNameTextField" destination="dwv-eG-0mB" id="L1z-Bs-nuz"/>
-                        <outlet property="gradeTextField" destination="Pbd-Ue-lC3" id="uTY-xj-a3a"/>
+                        <outlet property="gradeTextField" destination="Pbd-Ue-lC3" id="gfQ-KZ-bQI"/>
                         <outlet property="lastNameTextField" destination="rTS-Lf-V5B" id="D0c-ou-ue1"/>
                         <outlet property="passwordTextField" destination="sJa-D0-fDo" id="EqT-ye-xqR"/>
                         <outlet property="signUpButton" destination="kJg-4q-FJd" id="PTb-eg-bsV"/>

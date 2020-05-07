@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var uvusTextField: UITextField!
     
@@ -24,15 +24,24 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var gradeTextField: UITextField!
     
+    let gradeList = ["ISW", "TI", "IC", "ISA"]
+
+    var gradePicker = UIPickerView()
+     
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Connect data:
+        gradePicker.delegate = self
+        gradePicker.dataSource = self
+        gradeTextField.inputView = gradePicker
+        gradeTextField.textAlignment = .center
+             
         setUpElements()
     }
     func setUpElements(){
@@ -125,4 +134,29 @@ class SignUpViewController: UIViewController {
                view.window?.makeKeyAndVisible()
     }
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // Number of columns of data
+      public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+          return 1
+      }
+      
+      // The number of rows of data
+      public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+          return gradeList.count
+      }
+    
+      // The data to return for the row and component (column) that's being passed in
+      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          return gradeList[row]
+      }
+      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+          gradeTextField.text = gradeList[row]
+          gradeTextField.resignFirstResponder()
+      }
+      
 }
