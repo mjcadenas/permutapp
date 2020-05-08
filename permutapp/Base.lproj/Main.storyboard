@@ -46,11 +46,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pPO-V8-huk" secondAttribute="trailing" constant="40" id="Ra0-gW-BP8"/>
-                            <constraint firstItem="pPO-V8-huk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="p28-Vj-hXN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPO-V8-huk" secondAttribute="bottom" constant="40" id="vgi-0s-d4W"/>
+                            <constraint firstItem="1nD-GA-Cm0" firstAttribute="trailing" secondItem="pPO-V8-huk" secondAttribute="trailing" constant="40" id="Ra0-gW-BP8"/>
+                            <constraint firstItem="pPO-V8-huk" firstAttribute="leading" secondItem="1nD-GA-Cm0" secondAttribute="leading" constant="40" id="p28-Vj-hXN"/>
+                            <constraint firstItem="1nD-GA-Cm0" firstAttribute="bottom" secondItem="pPO-V8-huk" secondAttribute="bottom" constant="40" id="vgi-0s-d4W"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="1nD-GA-Cm0"/>
                     </view>
                     <navigationItem key="navigationItem" id="LVl-d8-8jf"/>
                     <connections>
@@ -172,11 +172,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="1YG-L5-LBq" firstAttribute="trailing" secondItem="oH8-Vo-3Jh" secondAttribute="trailing" constant="40" id="AxH-yI-LMh"/>
-                            <constraint firstItem="oH8-Vo-3Jh" firstAttribute="leading" secondItem="1YG-L5-LBq" secondAttribute="leading" constant="40" id="Fol-WY-w2s"/>
-                            <constraint firstItem="1YG-L5-LBq" firstAttribute="bottom" secondItem="oH8-Vo-3Jh" secondAttribute="bottom" constant="40" id="usX-Q6-DPq"/>
+                            <constraint firstItem="S2I-l6-Bpl" firstAttribute="trailing" secondItem="oH8-Vo-3Jh" secondAttribute="trailing" constant="40" id="AxH-yI-LMh"/>
+                            <constraint firstItem="oH8-Vo-3Jh" firstAttribute="leading" secondItem="S2I-l6-Bpl" secondAttribute="leading" constant="40" id="Fol-WY-w2s"/>
+                            <constraint firstItem="S2I-l6-Bpl" firstAttribute="bottom" secondItem="oH8-Vo-3Jh" secondAttribute="bottom" constant="40" id="usX-Q6-DPq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1YG-L5-LBq"/>
+                        <viewLayoutGuide key="safeArea" id="S2I-l6-Bpl"/>
                     </view>
                     <navigationItem key="navigationItem" id="LEN-Fy-DMZ"/>
                     <connections>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdU-An-IJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="-174"/>
+            <point key="canvasLocation" x="1893" y="-221"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rfX-VI-ATq">
@@ -240,11 +240,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="bottom" secondItem="6hD-Yu-uNV" secondAttribute="bottom" constant="40" id="Clc-dP-RNj"/>
-                            <constraint firstItem="6hD-Yu-uNV" firstAttribute="leading" secondItem="rpi-uJ-y5d" secondAttribute="leading" constant="40" id="MBH-61-Xye"/>
-                            <constraint firstItem="rpi-uJ-y5d" firstAttribute="trailing" secondItem="6hD-Yu-uNV" secondAttribute="trailing" constant="40" id="WC5-jx-avC"/>
+                            <constraint firstItem="6Ta-2a-Pxo" firstAttribute="bottom" secondItem="6hD-Yu-uNV" secondAttribute="bottom" constant="40" id="Clc-dP-RNj"/>
+                            <constraint firstItem="6hD-Yu-uNV" firstAttribute="leading" secondItem="6Ta-2a-Pxo" secondAttribute="leading" constant="40" id="MBH-61-Xye"/>
+                            <constraint firstItem="6Ta-2a-Pxo" firstAttribute="trailing" secondItem="6hD-Yu-uNV" secondAttribute="trailing" constant="40" id="WC5-jx-avC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rpi-uJ-y5d"/>
+                        <viewLayoutGuide key="safeArea" id="6Ta-2a-Pxo"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Ch-qN-MKL"/>
                     <connections>
@@ -267,23 +267,125 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a PermutApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9P-No-f6j">
-                                <rect key="frame" x="106.5" y="438" width="201.5" height="20"/>
+                                <rect key="frame" x="106.5" y="438" width="201.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.4823529412" green="0.68627450980000004" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="REL-JN-PmX">
+                                <rect key="frame" x="40" y="792" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-lM-Ror">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                        <state key="normal" title="Crear permuta"/>
+                                        <connections>
+                                            <segue destination="iQP-Wm-vEr" kind="show" id="xBe-LK-WZk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Q9P-No-f6j" firstAttribute="centerX" secondItem="orE-4O-Tp9" secondAttribute="centerX" id="YPy-az-KSg"/>
+                            <constraint firstItem="B2v-a1-2fy" firstAttribute="bottom" secondItem="REL-JN-PmX" secondAttribute="bottom" constant="40" id="7HV-Hy-5YF"/>
+                            <constraint firstItem="REL-JN-PmX" firstAttribute="leading" secondItem="B2v-a1-2fy" secondAttribute="leading" constant="40" id="KIO-d5-qMY"/>
+                            <constraint firstItem="B2v-a1-2fy" firstAttribute="trailing" secondItem="REL-JN-PmX" secondAttribute="trailing" constant="40" id="R28-JV-TdT"/>
+                            <constraint firstItem="Q9P-No-f6j" firstAttribute="centerX" secondItem="B2v-a1-2fy" secondAttribute="centerX" id="YPy-az-KSg"/>
                             <constraint firstItem="Q9P-No-f6j" firstAttribute="centerY" secondItem="orE-4O-Tp9" secondAttribute="centerY" id="djQ-JB-aMl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ET8-PM-5Ej"/>
+                        <viewLayoutGuide key="safeArea" id="B2v-a1-2fy"/>
                     </view>
+                    <connections>
+                        <outlet property="createPermutaButton" destination="Rek-lM-Ror" id="v2p-5X-g9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sps-EL-OeK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680" y="139"/>
+            <point key="canvasLocation" x="2679.7101449275365" y="138.61607142857142"/>
+        </scene>
+        <!--Create Permuta View Controller-->
+        <scene sceneID="bkH-jQ-Pe3">
+            <objects>
+                <viewController id="iQP-Wm-vEr" customClass="CreatePermutaViewController" customModule="permutapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="coG-0B-4JC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-Z9-yZz">
+                                <rect key="frame" x="40" y="488" width="334" height="280"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Curso" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M71-FV-4Tb">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="n03-yG-coB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grupo origen" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asj-6X-Gsm">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XyZ-7v-BAX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Grupo destino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKq-iH-rvb">
+                                        <rect key="frame" x="0.0" y="120" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5sw-qM-UAV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI1-NN-aaq">
+                                        <rect key="frame" x="0.0" y="180" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ejM-eE-gHG"/>
+                                        </constraints>
+                                        <state key="normal" title="Crear permuta"/>
+                                        <connections>
+                                            <action selector="createPermutaTapped:" destination="iQP-Wm-vEr" eventType="touchUpInside" id="QPf-1D-x6h"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd4-oF-HU6">
+                                        <rect key="frame" x="0.0" y="240" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TuK-7s-6D4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="asj-6X-Gsm" firstAttribute="height" secondItem="M71-FV-4Tb" secondAttribute="height" id="4fG-ub-5bK"/>
+                                    <constraint firstItem="GI1-NN-aaq" firstAttribute="height" secondItem="M71-FV-4Tb" secondAttribute="height" id="UJL-EW-tGT"/>
+                                    <constraint firstItem="Nd4-oF-HU6" firstAttribute="height" secondItem="M71-FV-4Tb" secondAttribute="height" id="btp-ie-1j3"/>
+                                    <constraint firstItem="nKq-iH-rvb" firstAttribute="height" secondItem="M71-FV-4Tb" secondAttribute="height" id="xWS-qZ-Ybu"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jNL-gg-Dhv" firstAttribute="trailing" secondItem="gqe-Z9-yZz" secondAttribute="trailing" constant="40" id="JQ7-zt-9Yv"/>
+                            <constraint firstItem="jNL-gg-Dhv" firstAttribute="bottom" secondItem="gqe-Z9-yZz" secondAttribute="bottom" constant="40" id="au9-4H-cvl"/>
+                            <constraint firstItem="gqe-Z9-yZz" firstAttribute="leading" secondItem="jNL-gg-Dhv" secondAttribute="leading" constant="40" id="lWQ-13-51M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jNL-gg-Dhv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pex-7y-arG"/>
+                    <connections>
+                        <outlet property="courseTextField" destination="M71-FV-4Tb" id="Es5-64-jSh"/>
+                        <outlet property="createPermutaButton" destination="GI1-NN-aaq" id="lxK-3f-3BT"/>
+                        <outlet property="errorLabel" destination="Nd4-oF-HU6" id="QJf-Nl-hOK"/>
+                        <outlet property="groupDestineTextField" destination="nKq-iH-rvb" id="b77-99-yAl"/>
+                        <outlet property="groupOriginTextField" destination="asj-6X-Gsm" id="uTW-sa-hvl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv7-g4-sEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="-244"/>
         </scene>
     </scenes>
 </document>

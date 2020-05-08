@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E01B52B2464D173008508D8 /* CreatePermutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B52A2464D173008508D8 /* CreatePermutaViewController.swift */; };
 		3E0A57D0245F866C000241B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A57CF245F866C000241B4 /* AppDelegate.swift */; };
 		3E0A57D2245F866C000241B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A57D1245F866C000241B4 /* SceneDelegate.swift */; };
 		3E0A57D4245F866C000241B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0A57D3245F866C000241B4 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1C95A8580892D43DE360327E /* Pods_permutapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_permutapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E01B52A2464D173008508D8 /* CreatePermutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePermutaViewController.swift; sourceTree = "<group>"; };
 		3E0A57CC245F866C000241B4 /* permutapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = permutapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0A57CF245F866C000241B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E0A57D1245F866C000241B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3E0AFAE4245F8C4600CF644F /* SignUpViewController.swift */,
 				3E0AFAE6245F8C6A00CF644F /* LoginViewController.swift */,
 				3E0AFAE8245F8C8000CF644F /* HomeViewController.swift */,
+				3E01B52A2464D173008508D8 /* CreatePermutaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				3E0A57D2245F866C000241B4 /* SceneDelegate.swift in Sources */,
 				3EBDB341245F9C5D00B63510 /* Utilities.swift in Sources */,
 				3E0AFAE9245F8C8000CF644F /* HomeViewController.swift in Sources */,
+				3E01B52B2464D173008508D8 /* CreatePermutaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
