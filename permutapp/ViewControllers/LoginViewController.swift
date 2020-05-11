@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
+        Utilities.styleLabel(errorLabel)
     }
 
     //Check the fields and validate that data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error messages.

@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseCore
+
 
 class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
 

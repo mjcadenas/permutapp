@@ -11,6 +11,9 @@ import Firebase
 
 class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    var db: Firestore!
+    
+    
     @IBOutlet weak var courseTextField: UITextField!
     
     @IBOutlet weak var groupOriginTextField: UITextField!
@@ -57,6 +60,7 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
         Utilities.styleTextField(groupOriginTextField)
         Utilities.styleTextField(groupDestineTextField)
         Utilities.styleFilledButton(createPermutaButton)
+        Utilities.styleLabel(errorLabel)
     }
     
     func validateField () -> String?{
@@ -84,14 +88,17 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
             let course = courseTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let groupOrigin = groupOriginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let groupDestine = groupDestineTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         
+            
         
         if groupOrigin == groupDestine {
                 showError("El grupo origen no puede coincidir con el grupo destino.")
         } else {
             //Create the permuta
-                let db = Firestore.firestore()
-                let newPermuta = db.collection("permutas").document()
-                newPermuta.setData(["course": course, "groupOrigin": groupOrigin, "groupDestine": groupDestine]) { (error) in
+            let db = Firestore.firestore()
+            let user = Auth.auth().currentUser?.uid
+            let newPermuta = db.collection("permutas").document()
+            newPermuta.setData(["course": course, "groupOrigin": groupOrigin, "groupDestine": groupDestine, "user": user]) { (error) in
                         if error != nil{
                         //Show error message
                         self.showError("Error creando la permuta.")
@@ -160,6 +167,6 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
             groupDestineTextField.resignFirstResponder()
         }
       }
-    
-    
+
+      
 }

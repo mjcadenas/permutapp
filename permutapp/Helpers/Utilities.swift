@@ -49,5 +49,10 @@ class Utilities {
         return passwordTest.evaluate(with: password)
     }
 
+    static func styleLabel(_ label:UILabel){
+        label.numberOfLines = 0
+        label.tintColor = UIColor.init(red: 32/255, green: 42/255, blue: 68/255, alpha: 1)
+        
+    }
     
 }
