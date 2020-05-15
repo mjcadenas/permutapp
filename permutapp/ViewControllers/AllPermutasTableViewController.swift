@@ -1,8 +1,8 @@
 //
-//  MyPermutasTableViewController.swift
+//  AllPermutasTableViewController.swift
 //  permutapp
 //
-//  Created by Maria Jesus Cadenas Sanchez on 11/05/2020.
+//  Created by Maria Jesus Cadenas Sanchez on 14/05/2020.
 //  Copyright © 2020 DlgaETSII. All rights reserved.
 //
 
@@ -10,35 +10,33 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class MyPermutasTableViewController: UITableViewController {
+class AllPermutasTableViewController: UITableViewController{
     var db: Firestore!
-    
-    
     var permutaArray = [Permuta]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
-        getPermutasForUser()
+        getAllPermutas()
+    }
+    
+    func getAllPermutas(){
+            let db = Firestore.firestore()
+            db.collection("permutas")
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        self.permutaArray = querySnapshot!.documents.compactMap({Permuta(dictionary: $0.data())})
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+            }
+        
+    
     }
 
-    func getPermutasForUser(){
-        let user = Auth.auth().currentUser?.uid
-        db.collection("permutas").whereField("user", isEqualTo: user).getDocuments() { querySnapshot, err in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                
-                self.permutaArray = querySnapshot!.documents.compactMap({Permuta(dictionary: $0.data())})
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
-    
-    
-    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,5 +58,4 @@ class MyPermutasTableViewController: UITableViewController {
          return cell
     }
 
-    
 }

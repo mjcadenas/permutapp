@@ -13,6 +13,7 @@ protocol DocumentSerializeable {
     init?(dictionary:[String:Any])
 }
 struct Permuta {
+    var grade: String
     var course: String
     var groupOrigin: String
     var groupDestine: String
@@ -20,6 +21,7 @@ struct Permuta {
 
     var dictionary: [String: Any] {
         return [
+            "grade": grade,
             "curse": course,
             "groupOrigin": groupOrigin,
             "groupDestine": groupDestine,
@@ -29,10 +31,11 @@ struct Permuta {
 }
 extension Permuta : DocumentSerializeable {
     init?(dictionary: [String : Any]) {
-        guard let course = dictionary["course"] as? String,
+        guard let grade = dictionary["grade"] as? String,
+            let course = dictionary["course"] as? String,
             let groupOrigin = dictionary["groupOrigin"] as? String,
             let groupDestine = dictionary["groupDestine"] as? String,
             let user = dictionary["user"] as? String else {return nil}
-        self.init(course: course, groupOrigin: groupOrigin, groupDestine: groupDestine, user: user)
+        self.init(grade: grade, course: course, groupOrigin: groupOrigin, groupDestine: groupDestine, user: user)
     }
 }

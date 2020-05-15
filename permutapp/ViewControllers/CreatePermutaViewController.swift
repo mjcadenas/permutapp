@@ -12,7 +12,7 @@ import Firebase
 class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     var db: Firestore!
-    
+    @IBOutlet weak var gradeTextField: UITextField!
     
     @IBOutlet weak var courseTextField: UITextField!
     
@@ -21,10 +21,13 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet weak var groupDestineTextField: UITextField!
 
     @IBOutlet weak var createPermutaButton: UIButton!
-
+    
+    let gradeList = ["ISW", "TI", "IC", "ISA"]
     let courseList = ["1","2","3","4"]
     let groupOriginList = ["1","2","3","4","5"]
     let groupDestineList = ["1","2","3","4","5"]
+    
+    var gradePicker = UIPickerView()
     var coursePicker = UIPickerView()
     var groupOriginPicker = UIPickerView()
     var groupDestinePicker = UIPickerView()
@@ -34,6 +37,11 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        gradePicker.delegate = self
+        gradePicker.dataSource = self
+        gradeTextField.inputView = gradePicker
+        gradeTextField.textAlignment = .center
+        
         coursePicker.delegate = self
         coursePicker.dataSource = self
         courseTextField.inputView = coursePicker
@@ -56,6 +64,7 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
         errorLabel.alpha = 0
                
         // Style the elements
+        Utilities.styleTextField(gradeTextField)
         Utilities.styleTextField(courseTextField)
         Utilities.styleTextField(groupOriginTextField)
         Utilities.styleTextField(groupDestineTextField)
@@ -66,13 +75,13 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
     func validateField () -> String?{
     
         //Check that all fields are filled in
-        if courseTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        if gradeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            courseTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             groupOriginTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             groupDestineTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
             return "Por favor, introduce todos los datos."
         }
-
         return nil
     }
    
@@ -85,12 +94,11 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
         showError(error!)
         } else {
             //Create cleaned versions of the data
+            let grade = gradeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let course = courseTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let groupOrigin = groupOriginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let groupDestine = groupDestineTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-         
-            
-        
+
         if groupOrigin == groupDestine {
                 showError("El grupo origen no puede coincidir con el grupo destino.")
         } else {
@@ -98,7 +106,7 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
             let db = Firestore.firestore()
             let user = Auth.auth().currentUser?.uid
             let newPermuta = db.collection("permutas").document()
-            newPermuta.setData(["course": course, "groupOrigin": groupOrigin, "groupDestine": groupDestine, "user": user]) { (error) in
+            newPermuta.setData(["grade": grade, "course": course, "groupOrigin": groupOrigin, "groupDestine": groupDestine, "user": user]) { (error) in
                         if error != nil{
                         //Show error message
                         self.showError("Error creando la permuta.")
@@ -129,14 +137,15 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
         // Dispose of any resources that can be recreated.
     }
     // Number of columns of data
-      public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
-          
-      }
-      
+    }
+
       // The number of rows of data
-      public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == coursePicker{
+      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == gradePicker{
+            return gradeList.count
+        } else if pickerView == coursePicker{
             return courseList.count
         } else if pickerView == groupOriginPicker {
             return groupOriginList.count
@@ -147,7 +156,9 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
     
       // The data to return for the row and component (column) that's being passed in
       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       if pickerView == coursePicker{
+            if pickerView == gradePicker {
+                 return gradeList[row]
+            } else if pickerView ==  coursePicker{
           return courseList[row]
            } else if pickerView == groupOriginPicker {
                return groupOriginList[row]
@@ -156,10 +167,13 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
            }
       }
       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == coursePicker{
+        if pickerView == gradePicker {
+            gradeTextField.text = gradeList[row]
+            gradeTextField.resignFirstResponder()
+        } else if pickerView == coursePicker{
           courseTextField.text = courseList[row]
           courseTextField.resignFirstResponder()
-        }else if pickerView == groupOriginPicker{
+        } else if pickerView == groupOriginPicker{
             groupOriginTextField.text = groupOriginList[row]
             groupOriginTextField.resignFirstResponder()
         } else {
@@ -168,5 +182,4 @@ class CreatePermutaViewController: UIViewController, UIPickerViewDataSource, UIP
         }
       }
 
-      
 }
